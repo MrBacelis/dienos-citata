@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the day</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay muted loop>
+        <source src="content/backgroundvid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <div class="container">
+        <div class="item pav"><h1>Šios dienos citata:</h1></div>
+        <div class="item cit"><h2 id="quote"></h2></div>
+    </div>
+
+    <div class="bot"><p>&COPY; 2024 Mr.B</p></div>
+
+
+
+    <script>
+        // Array of quotes
+        var quotes = [
+          "Viskas bus gerai. - B.Vanagas",
+          "Pridaužėm ratų. - V.Žala",
+          "Būna sekas, būna kasekas. - A.Kanopkinas",
+          "Kas skaitys, tas bibys. - Saldus B.",
+          "Garso blet! - Ž.Žvagulis ",
+          "Bober, kurwa! - Lenkas",
+          "Yowza, that’s a big file. - GitHub"
+        ];
+    
+        // Function to get a random quote
+        function getRandomQuote() {
+          var randomNumber = Math.floor(Math.random() * quotes.length);
+          return quotes[randomNumber];
+        }
+    
+        // Display the random quote on page load
+        document.getElementById('quote').innerText = getRandomQuote();
+      </script>
+</body>
+</html>
